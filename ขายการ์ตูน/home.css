@@ -1,0 +1,111 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+/*หีบเพลงจะใช้ในการแสดง (และซ่อน) เนื้อหาที่ถูกแบ่งออกเป็นส่วน*/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif; 
+}
+
+.regis{
+    position: relative;
+    bottom: 35px;
+    left: 90%;
+}
+
+h1 {
+    text-align: center;
+    color: #333; /*สีฟ้อน*/
+    margin-top: 50px; /*ให้margin top ลงมา50*/
+}
+
+.accordion {
+    width: 100%;
+    max-width: 1000px;
+    height: 350px;
+    overflow: hidden;
+    margin: 50px auto;
+}
+
+.accordion ul {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.accordion ul li {
+    display: table-cell; /*กำหนดให้เเบ่งเป็นช่องตาราง*/
+    position: relative;
+    height: 350px;
+    width: 16%;
+    background-repeat: no-repeat;
+    background-position: center ;
+    transition: all 500ms ease;
+}
+
+
+.accordion ul li div a {
+    display: block;
+    height: 350px;
+    width: 100%;
+    position: relative;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.accordion ul li div a * {
+    opacity: 0;
+    margin: 0;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden; /*ให้เราซ่อนข้อความที่ล้นออกมานอกกรอบ*/
+}
+
+.accordion ul li div a h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    top: 160px;
+}
+
+.accordion ul li div a p {
+    top: 160px;
+    font-size: 22.5px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.accordion ul li:nth-child(1) {
+    background-image: url(https://s.isanook.com/ga/0/rp/r/w728/ya0xa0m1w0/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2dhLzAvdWQvMjEyLzEwNjQ5MTMvb25lLXB1bmNoLW1hbi0oMSkuanBn.jpg);
+    
+}
+.accordion ul li:nth-child(2) {
+    background-image: url(https://upload.wikimedia.org/wikipedia/en/9/97/Eiga_Doraemon_Nobita_no_Shin_Ky%C5%8Dry%C5%AB_poster.jpg);
+}
+.accordion ul li:nth-child(3) {
+    background-image: url(https://store-images.s-microsoft.com/image/apps.39852.14455250034361967.824623c3-91b6-402f-9a68-c66bfac9bc20.7bfae929-5b2a-4efe-9639-5ffd1e2de297?mode=scale&q=90&h=720&w=1280&background=%23FFFFFF);
+}
+.accordion ul li:nth-child(4) {
+    background-image: url(https://cdn-local.mebmarket.com/meb/server1/114711/Thumbnail/book_detail_large.gif?5);
+}
+.accordion ul li:nth-child(5) {
+    background-image: url(http://www.animenewsnetwork.com/thumbnails/fit750x750/cms/news/124056/darling.jpg);
+}
+
+.accordion ul:hover li{
+    width: 8%;
+}
+
+.accordion ul:hover li:hover {
+    width: 60%;
+}
+
+.accordion ul:hover li:hover a *{
+    opacity: 1; 
+}
